@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowerChat </title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <script type="module" src="config.js"></script>
+    <script type="module" src="auth.js"></script>
+    <script src="tabs.js"></script>
+    <script type="module" src="serach.js"></script>
+    <script type="module" src="chat.js"></script>
+    <script type="module" src="voiceMessage.js"></script>
+    <script type="module" src="contextMenu.js"></script>
+    <script type="module" src="modalForGroup.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- <div class="modal" id="myModal-for-group">
+      <div class="modal-content"></div>
+    </div> -->
+
+    <!-- <div id="myDiv">Right-click me!</div> -->
+    <div class="container">
+      <div id="splash-screen">
+        <!-- Add your splash screen content here -->
+        <h1>Loading...</h1>
+      </div>
+      <div id="content">
+        <h1 id="welcome-txt"></h1>
+        <button id="logout-btn">Выйти</button> <br /><br />
+        <input
+          type="text"
+          id="query-text"
+          placeholder="Введите имя пользователя"
+        />
+        <button id="search-btn">Поиск</button>
+        <ul id="search-results"></ul>
+        <!-- <button id="startRecordBtn">|></button> -->
+        <button id="openGroupAddModalButton">Создать беседу</button>
+        <div id="myModal-for-group" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeModalButton-for-group">&times;</span>
+            <h3>Создать беседу</h3>
+            <input
+              type="text"
+              id="group-name-input"
+              placeholder="Введите название беседы"
+            />
+            <button id="create-group-button">Создать</button>
+          </div>
+        </div>
+        <div class="chat-el-location" id="chat-el-location">
+          <div id="chats-history">
+            <!-- <div class="chat-item">
+              <div class="friend-pfp"></div>
+              <div class="chat-info">
+                <div class="chat-header">
+                  <p class="friend-name">Paul</p>
+                  <p class="last-message-time">23:45</p>
+                </div>
+  
+                <div class="chat-text">
+                  <p class="chats-last-message">Hello! Whats up broooooooooo</p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+          <div id="chat"></div>
+        </div>
+      </div>
+
+      <div class="tab-container" id="tab-container-id">
+        <div class="tab-buttons-div">
+          <button class="tab-button" onclick="openTab('tab1')">
+            Зарегистрироваться
+          </button>
+          <button class="tab-button" onclick="openTab('tab2')">Войти</button>
+        </div>
+
+        <div id="tab1" class="tab-content">
+          <h1 class="reg-text">Создайте аккаунт</h1>
+          <form id="register-form">
+            <input type="text" id="username" placeholder="Имя пользователя" />
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="pass" placeholder="Пароль" />
+          </form>
+          <button id="register-btn">Зарегистрироваться</button>
+        </div>
+
+        <div id="tab2" class="tab-content">
+          <h1 class="reg-text">Войти</h1>
+          <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" />
+            <input type="password" id="login-pass" placeholder="Пароль" />
+          </form>
+          <button id="login-btn">Войти</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"></script> -->
+  </body>
+</html>
